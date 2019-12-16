@@ -12,9 +12,10 @@ const currentThirdsRotationKeys = {};
 setKeyHandler ( 'v', HYPER, () => {
 
 	const window = Window.focused ();
+	const hash = window.hash();
 
-	if (!currentThirdsRotationKeys[window.hash()]) {
-		currentThirdsRotationKeys[window.hash()] = 0;
+	if (!currentThirdsRotationKeys[hash]) {
+		currentThirdsRotationKeys[hash] = 0;
 	}
 
   if ( !window ) return;
@@ -22,7 +23,7 @@ setKeyHandler ( 'v', HYPER, () => {
   const screen = Screen.main (),
         sFrame = screen.flippedVisibleFrame ();
 
-	const rotationValues = thirdsRotationQueue[currentThirdsRotationKeys[window.hash()]];
+	const rotationValues = thirdsRotationQueue[currentThirdsRotationKeys[hash]];
 
 	const nextFrame = {
 		x: sFrame.width * rotationValues[0],
@@ -33,8 +34,8 @@ setKeyHandler ( 'v', HYPER, () => {
 
 	window.setFrame ( nextFrame );
 
-	currentThirdsRotationKeys[window.hash()]++;
-	if (currentThirdsRotationKeys[window.hash()] > thirdsRotationQueue.length-1) {
-		currentThirdsRotationKeys[window.hash()] = 0;
+	currentThirdsRotationKeys[hash]++;
+	if (currentThirdsRotationKeys[hash] > thirdsRotationQueue.length-1) {
+		currentThirdsRotationKeys[hash] = 0;
 	}
 });

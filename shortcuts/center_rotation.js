@@ -12,9 +12,10 @@ const currentCenterRotationKeys = {};
 setKeyHandler ( 'c', HYPER, () => {
 
 	const window = Window.focused ();
+	const hash = window.hash();
 
-	if (!currentCenterRotationKeys[window.hash()]) {
-		currentCenterRotationKeys[window.hash()] = 0;
+	if (!currentCenterRotationKeys[hash]) {
+		currentCenterRotationKeys[hash] = 0;
 	}
 
   if ( !window ) return;
@@ -22,7 +23,7 @@ setKeyHandler ( 'c', HYPER, () => {
   const screen = Screen.main (),
         sFrame = screen.flippedVisibleFrame ();
 
-	const rotationValues = centerRotationQueue[currentCenterRotationKeys[window.hash()]];
+	const rotationValues = centerRotationQueue[currentCenterRotationKeys[hash]];
 
 	const nextFrame = {
 		x: sFrame.width * rotationValues[0],
@@ -33,9 +34,9 @@ setKeyHandler ( 'c', HYPER, () => {
 
 	window.setFrame ( nextFrame );
 
-	currentCenterRotationKeys[window.hash()]++;
-	if (currentCenterRotationKeys[window.hash()] > centerRotationQueue.length-1) {
-		currentCenterRotationKeys[window.hash()] = 0;
+	currentCenterRotationKeys[hash]++;
+	if (currentCenterRotationKeys[hash] > centerRotationQueue.length-1) {
+		currentCenterRotationKeys[hash] = 0;
 	}
 
 });
