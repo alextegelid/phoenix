@@ -19,6 +19,8 @@ setKeyHandler ( 'q', ['cmd'], () => {
 
   } else {
 
+		alert('Use double Q to quit');
+
     lastQuitTimestamp = timestamp;
 
   }
