@@ -35,39 +35,38 @@ require ( './helpers/switch_space.js' );
 require ( './helpers/write_file.js' );
 require ( './helpers/write_json.js' );
 
-require ( './shortcuts/brightness.js' );
-require ( './shortcuts/center.js' );
-require ( './shortcuts/corners.js' );
-require ( './shortcuts/expand.js' );
-require ( './shortcuts/focus.js' );
-require ( './shortcuts/fullscreen.js' );
+//require ( './shortcuts/center.js' );
+require ( './shortcuts/center_rotation.js' );
+//require ( './shortcuts/corners.js' );
+//require ( './shortcuts/expand.js' );
+//require ( './shortcuts/focus.js' );
+//require ( './shortcuts/fullscreen.js' );
 require ( './shortcuts/info.js' );
-require ( './shortcuts/music.js' );
-require ( './shortcuts/grow.js' );
-require ( './shortcuts/halves.js' );
-require ( './shortcuts/pause.js' );
+//require ( './shortcuts/grow.js' );
+//require ( './shortcuts/halves.js' );
+//require ( './shortcuts/pause.js' );
 require ( './shortcuts/quit.js' );
 require ( './shortcuts/reload.js' );
 require ( './shortcuts/screens.js' );
 require ( './shortcuts/sides.js' );
-require ( './shortcuts/spaces.js' );
+//require ( './shortcuts/spaces.js' );
 require ( './shortcuts/sixths.js' );
-require ( './shortcuts/split_view.js' );
-require ( './shortcuts/thirds.js' );
-require ( './shortcuts/volume.js' );
+//require ( './shortcuts/split_view.js' );
+//require ( './shortcuts/thirds.js' );
+require ( './shortcuts/thirds_rotation.js' );
 
-require ( './mouse/snapping.js' );
+//require ( './mouse/snapping.js' );
 
-require ( './magic/chrome.js' );
+//require ( './magic/chrome.js' );
 require ( './magic/developer_tools.js' );
-require ( './magic/finder.js' );
+//require ( './magic/finder.js' );
 require ( './magic/hyper.js' );
-require ( './magic/iterm.js' );
-require ( './magic/terminal.js' );
-require ( './magic/vscode.js' );
+//require ( './magic/iterm.js' );
+//require ( './magic/terminal.js' );
+//require ( './magic/vscode.js' );
 
-require ( './spaces/alfred.js' );
-require ( './spaces/list.js' );
+// require ( './spaces/alfred.js' );
+// require ( './spaces/list.js' );
 // require ( './spaces/overlay.js' );
 
 /* LOADED */
