@@ -3,8 +3,8 @@
 
 const centerRotationQueue = [
 	[0, 0, 1, 1],
-	[0.15, 0.15, 0.85, 0.85],
-	[0.15, 0, 0.85, 1]
+	[0.2, 0.15, 0.8, 0.85],
+	[0.2, 0, 0.8, 1]
 ];
 
 const currentCenterRotationKeys = {};
