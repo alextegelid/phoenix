@@ -4,7 +4,9 @@
 const thirdsRotationQueue = [
 	[0, 0, 0.33, 1],
 	[0.33, 0, 0.66, 1],
-	[0.66, 0, 1, 1]
+	[0.66, 0, 1, 1],
+	[0, 0, 0.66, 1],
+	[0.33, 0, 1, 1]
 ];
 
 const currentThirdsRotationKeys = {};
