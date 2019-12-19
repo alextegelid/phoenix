@@ -52,6 +52,7 @@ require ( './shortcuts/sixths.js' );
 //require ( './shortcuts/split_view.js' );
 //require ( './shortcuts/thirds.js' );
 require ( './shortcuts/thirds_rotation.js' );
+require ( './shortcuts/move_to_screen.js' );
 
 //require ( './mouse/snapping.js' );
 
