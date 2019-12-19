@@ -4,7 +4,6 @@
 const HYPER = ['ctrl', 'alt', 'cmd'];
 const HYPER_SHIFT = [...HYPER, 'shift'];
 const DOUBLE_KEY_INTERVAL = 250;
-const MOVE_REPEAT_INTERVAL = 250;
 
 /* OTHERS */
 
