@@ -22,7 +22,7 @@ const GROW_AMOUNT = 50;
 
 const JSON_INDENTATION = 2;
 
-const MODAL_APPEARANCE = 'light';
+const MODAL_APPEARANCE = 'dark';
 const MODAL_DURATION = 0.5;
 const MODAL_ANIMATION_DURATION = .2;
 const MODAL_WEIGHT = 24;
