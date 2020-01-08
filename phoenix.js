@@ -36,7 +36,7 @@ require ( './helpers/write_json.js' );
 
 //require ( './shortcuts/center.js' );
 require ( './shortcuts/center_rotation.js' );
-//require ( './shortcuts/corners.js' );
+require ( './shortcuts/corners.js' );
 //require ( './shortcuts/expand.js' );
 //require ( './shortcuts/focus.js' );
 //require ( './shortcuts/fullscreen.js' );
