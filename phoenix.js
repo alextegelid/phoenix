@@ -50,7 +50,7 @@ require ( './shortcuts/reload.js' );
 require ( './shortcuts/screens.js' );
 require ( './shortcuts/sides.js' );
 //require ( './shortcuts/spaces.js' );
-require ( './shortcuts/sixths.js' );
+//require ( './shortcuts/sixths.js' );
 //require ( './shortcuts/split_view.js' );
 //require ( './shortcuts/thirds.js' );
 require ( './shortcuts/thirds_rotation.js' );
