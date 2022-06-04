@@ -29,7 +29,7 @@ setKeyHandler ( 'v', HYPER, () => {
 
 	const nextFrame = {
 		x: sFrame.width * rotationValues[0],
-		y: sFrame.height * rotationValues[1],
+		y: sFrame.y + sFrame.height * rotationValues[1],
 		width: sFrame.width * (rotationValues[2]-rotationValues[0]),
 		height: sFrame.height * (rotationValues[3]-rotationValues[1])
 	};
