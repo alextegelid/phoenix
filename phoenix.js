@@ -37,11 +37,11 @@ require ( './helpers/write_json.js' );
 
 //require ( './shortcuts/center.js' );
 require ( './shortcuts/center_rotation.js' );
-require ( './shortcuts/corners.js' );
+// require ( './shortcuts/corners.js' );
 //require ( './shortcuts/expand.js' );
 //require ( './shortcuts/focus.js' );
 //require ( './shortcuts/fullscreen.js' );
-require ( './shortcuts/info.js' );
+// require ( './shortcuts/info.js' );
 //require ( './shortcuts/grow.js' );
 //require ( './shortcuts/halves.js' );
 //require ( './shortcuts/pause.js' );
@@ -61,8 +61,8 @@ require ( './shortcuts/move_to_screen.js' );
 //require ( './magic/chrome.js' );
 require ( './magic/developer_tools.js' );
 //require ( './magic/finder.js' );
-require ( './magic/hyper.js' );
-//require ( './magic/iterm.js' );
+// require ( './magic/hyper.js' );
+// require ( './magic/iterm.js' );
 //require ( './magic/terminal.js' );
 //require ( './magic/vscode.js' );
 
