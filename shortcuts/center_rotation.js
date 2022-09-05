@@ -3,8 +3,8 @@
 
 const centerRotationQueue = [
 	[0, 0, 1, 1],
-	[0.2, 0.15, 0.8, 0.85],
-	[0.2, 0, 0.8, 1]
+	[0.15, 0.1, 0.7, 0.85],
+	[0.15, 0, 0.7, 1]
 ];
 
 const currentCenterRotationKeys = {};
@@ -23,15 +23,24 @@ setKeyHandler ( 'c', HYPER, () => {
 
 	const sFrame = screen.flippedVisibleFrame();
 
-	const [x, y, width, height] = centerRotationQueue[currentCenterRotationKeys[hash]];
+	// Extract the values from the array.
+	const [origX, origY, origWidth, origHeight] = centerRotationQueue[currentCenterRotationKeys[hash]];
 
+	// Calculate new frame.
+	// Use percentage of screen size if the value is between 0 and 1.
+	// Otherwise use the value as is.
+	const x = origX <= 1 ? origX * sFrame.width : origX;
+	const y = origY <= 1 ? origY * sFrame.height : origY;
+	const width = origWidth <= 1 ? origWidth * sFrame.width : origWidth;
+	const height = origHeight <= 1 ? origHeight * sFrame.height : origHeight;
+
+	// Set the new frame.
 	const nextFrame = {
-		x: sFrame.width * x + WINDOW_GAP,
-		y: sFrame.y + sFrame.height * y + WINDOW_GAP,
-		width: sFrame.width * (width-x) - WINDOW_GAP * 2,
-		height: sFrame.height * (height-y) - WINDOW_GAP * 2
+		x: x,
+		y: y,
+		width: width,
+		height: height
 	};
-
 	window.setFrame(nextFrame);
 
 	currentCenterRotationKeys[hash]++;
