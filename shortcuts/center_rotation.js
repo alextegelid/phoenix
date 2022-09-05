@@ -23,13 +23,13 @@ setKeyHandler ( 'c', HYPER, () => {
 
 	const sFrame = screen.flippedVisibleFrame();
 
-	const rotationValues = centerRotationQueue[currentCenterRotationKeys[hash]];
+	const [x, y, width, height] = centerRotationQueue[currentCenterRotationKeys[hash]];
 
 	const nextFrame = {
-		x: sFrame.width * rotationValues[0] + WINDOW_GAP,
-		y: sFrame.y + sFrame.height * rotationValues[1] + WINDOW_GAP,
-		width: sFrame.width * (rotationValues[2]-rotationValues[0]) - WINDOW_GAP * 2,
-		height: sFrame.height * (rotationValues[3]-rotationValues[1]) - WINDOW_GAP * 2
+		x: sFrame.width * x + WINDOW_GAP,
+		y: sFrame.y + sFrame.height * y + WINDOW_GAP,
+		width: sFrame.width * (width-x) - WINDOW_GAP * 2,
+		height: sFrame.height * (height-y) - WINDOW_GAP * 2
 	};
 
 	window.setFrame(nextFrame);
