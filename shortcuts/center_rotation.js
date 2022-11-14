@@ -1,5 +1,5 @@
 
-/* EXPAND */
+/* CENTER ROTATION */
 
 const centerRotationQueue = [
 	[0, 0, 1, 1],
@@ -52,8 +52,8 @@ setKeyHandler ( 'c', HYPER, () => {
 
 	// Set the new frame.
 	const nextFrame = {
-		x: x,
-		y: y,
+		x: sFrame.x + x,
+		y: sFrame.y + y,
 		width: width,
 		height: height
 	};
