@@ -28,7 +28,7 @@ setKeyHandler ( 'v', HYPER, () => {
 	const rotationValues = thirdsRotationQueue[currentThirdsRotationKeys[hash]];
 
 	const nextFrame = {
-		x: sFrame.width * rotationValues[0] + WINDOW_GAP,
+		x: sFrame.x + sFrame.width * rotationValues[0] + WINDOW_GAP,
 		y: sFrame.y + sFrame.height * rotationValues[1] + WINDOW_GAP,
 		width: sFrame.width * (rotationValues[2]-rotationValues[0]) - WINDOW_GAP,
 		height: sFrame.height * (rotationValues[3]-rotationValues[1]) - WINDOW_GAP*2
